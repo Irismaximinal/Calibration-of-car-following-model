@@ -13,17 +13,17 @@ filename = 'car_following_dataset.csv';                                    % nam
 dataset = importdata([path,filename]);
 
 time = dataset.data(:,1);   
-% position_lead = dataset.data(:,2);                        
-% velocity_lead = dataset.data(:,3);                        
-% position_follower = dataset.data(:,4);                 
-% velocity_follower = dataset.data(:,5); 
+position_lead = dataset.data(:,2);                        
+velocity_lead = dataset.data(:,3);                        
+position_follower = dataset.data(:,4);                 
+velocity_follower = dataset.data(:,5); 
 
 dt = time(2)-time(1);                                              % time step 
 
-position_lead = dataset.data(:,2)+normrnd(0,0.5,size(time));                        
-velocity_lead = dataset.data(:,3)+normrnd(0,0.1,size(time));                        
-position_follower = dataset.data(:,4)+normrnd(0,0.5,size(time));                 
-velocity_follower = dataset.data(:,5)+normrnd(0,0.05,size(time));                  
+% position_lead = dataset.data(:,2)+normrnd(0,0.5,size(time));                        
+% velocity_lead = dataset.data(:,3)+normrnd(0,0.1,size(time));                        
+% position_follower = dataset.data(:,4)+normrnd(0,0.5,size(time));                 
+% velocity_follower = dataset.data(:,5)+normrnd(0,0.05,size(time));                  
 
 %----------data filter/ Unfinished----------%
 % The raw data may have some noise 
