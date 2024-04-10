@@ -7,7 +7,7 @@ function [f] = fitness(x,dt,dv,dx,v,x_l,v_l)
 % x(5): comfortable deceleration: 	β
 % x(6): minimum gap: s0
 % formulation of IDM 
-% dv/dt = α*( 1-(v/v0)^δ-( ( s0+vT+vΔv/sqrt(|αβ|) )/ (dx-l) )^2 )
+% dv/dt = α*( 1-(v/v0)^δ-( ( s0+vT+vΔv/sqrt(|4αβ|) )/ (dx-l) )^2 )
 
 gama = 0.5;
 len = length(dv);
