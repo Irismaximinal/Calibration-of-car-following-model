@@ -23,7 +23,7 @@ x_ = (x_l(1)-dx(1))*ones(size(x_l));
 for k = 1:len-1
     
     % Acceleration calculation
-    e_dis = x(6)+v_(k)*x(1) - v_(k)*dv_(k)/sqrt(-x(4)*x(5));
+    e_dis = x(6)+v_(k)*x(1) - v_(k)*dv_(k)/sqrt(-4*x(4)*x(5));
     a_k = x(4)*( 1- ( v_(k)/x(2) )^x(3) - ( e_dis/(dx_(k)-car_len) )^2);
 
      % Position and velocity updating
