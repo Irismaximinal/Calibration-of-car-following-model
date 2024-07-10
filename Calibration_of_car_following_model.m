@@ -130,7 +130,7 @@ x_val_ = (x_l_val(1)-dx_val(1))*ones(size(x_l_val));
 for k = 1:(len-len_cal)
     
     % Acceleration calculation
-    e_dis = X(6)+v_val_(k)*X(1) - v_val_(k)*dv_val_(k)/sqrt(-X(4)*X(5));
+    e_dis = X(6)+v_val_(k)*X(1) - v_val_(k)*dv_val_(k)/sqrt(-4*X(4)*X(5));
     a_k = X(4)*( 1- ( v_val_(k)/X(2) )^X(3) - ( e_dis/(dx_val_(k)-car_len) )^2);
 
     % Position and velocity updating
